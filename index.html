@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Novel Indonesia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+      background: #0e0e10;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #8e8e93;
+    }
+    .profile {
+      text-align: center;
+      margin: 20px 0 25px;
+    }
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #2c2c2e;
+      margin-bottom: 12px;
+    }
+    .group-name {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+    .members-count {
+      color: #8e8e93;
+      font-size: 15px;
+      margin: 3px 0;
+    }
+    .action-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .action-item button {
+      background: #ffffff;
+      color: #1c1c1e;
+      border: none;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-bottom: 5px;
+    }
+    .action-item span {
+      font-size: 13px;
+      color: #ffffff;
+    }
+    .invite-link {
+      background: #2c2c2e;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .invite-link p {
+      margin: 0 0 8px 0;
+      color: #8e8e93;
+      font-size: 14px;
+    }
+    .invite-link a {
+      color: #5d9df5;
+      text-decoration: none;
+      font-size: 15px;
+      word-break: break-all;
+    }
+    .tabs {
+      display: flex;
+      background: #2c2c2e;
+      padding: 8px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
+    .tabs span {
+      color: #8e8e93;
+      font-size: 14px;
+      padding: 8px 12px;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .tabs .active {
+      color: #ffffff;
+      font-weight: 600;
+      background: #3a3a3c;
+      border-radius: 8px;
+    }
+    .members-list {
+      background: #2c2c2e;
+      border-radius: 12px;
+      padding: 5px 0;
+      margin-bottom: 30px;
+    }
+    .member {
+      padding: 12px 15px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #3a3a3c;
+    }
+    .member:last-child {
+      border-bottom: none;
+    }
+    .member-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .member-info {
+      flex: 1;
+    }
+    .member-name {
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .member-status {
+      font-size: 13px;
+      color: #8e8e93;
+    }
+    .online {
+      color: #34c759 !important;
+    }
+    .recently {
+      color: #ffcc00 !important;
+    }
+
+    /* Warna avatar acak */
+    .avatar-1 { background-color: #FF6B6B; }
+    .avatar-2 { background-color: #FFD93D; }
+    .avatar-3 { background-color: #6BCB77; }
+    .avatar-4 { background-color: #4D96FF; }
+    .avatar-5 { background-color: #A66DD4; }
+    .avatar-6 { background-color: #FF922B; }
+    .avatar-7 { background-color: #20C997; }
+    .avatar-8 { background-color: #EF476F; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="profile">
+      <img src="https://img.doodcdn.io/splash/4gq91ai640jdcv1r.jpg" alt="Logo" class="logo"/>
+      <h1 class="group-name">Viralisme Indo Terbaru 2025</h1>
+      <p class="members-count">40.472 members, 120 online</p>
+    </div>
+
+    <div class="action-buttons">
+      <div class="action-item">
+        <button>＋</button>
+        <span>Add Members</span>
+      </div>
+      <div class="action-item">
+        <button>⩍</button>
+        <span>Unmute</span>
+      </div>
+      <div class="action-item">
+        <button>⋯</button>
+        <span>More</span>
+      </div>
+    </div>
+    
+    <div class="invite-link">
+      <p>Invite link</p>
+      <a href="#">https://t.me/viralismeindo</a>
+    </div>
+    
+    <div class="tabs">
+      <span class="active">Members</span>
+      <span>Media</span>
+      <span>Files</span>
+      <span>Music</span>
+      <span>Voice</span>
+      <span>Links</span>
+    </div>
+    
+    <div class="members-list">
+      <div class="member">
+        <div class="member-avatar avatar-1">R</div>
+        <div class="member-info">
+          <div class="member-name">Ren</div>
+          <div class="member-status">last seen just now</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-2">S</div>
+        <div class="member-info">
+          <div class="member-name">Siti Nur Afifah</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-3">D</div>
+        <div class="member-info">
+          <div class="member-name">Dipsi</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-4">G</div>
+        <div class="member-info">
+          <div class="member-name">Girl🌼</div>
+          <div class="member-status recently">last seen recently</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-5">R</div>
+        <div class="member-info">
+          <div class="member-name">Rehan Rere</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-6">M</div>
+        <div class="member-info">
+          <div class="member-name">Muna Anum</div>
+          <div class="member-status">last seen 4 minutes ago</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-7">I</div>
+        <div class="member-info">
+          <div class="member-name">I Honey👻</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-8">A</div>
+        <div class="member-info">
+          <div class="member-name">anak sulung</div>
+          <div class="member-status">last seen a long time ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Novel Indonesia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+      background: #0e0e10;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #8e8e93;
+    }
+    .profile {
+      text-align: center;
+      margin: 20px 0 25px;
+    }
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #2c2c2e;
+      margin-bottom: 12px;
+    }
+    .group-name {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+    .members-count {
+      color: #8e8e93;
+      font-size: 15px;
+      margin: 3px 0;
+    }
+    .action-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .action-item button {
+      background: #ffffff;
+      color: #1c1c1e;
+      border: none;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-bottom: 5px;
+    }
+    .action-item span {
+      font-size: 13px;
+      color: #ffffff;
+    }
+    .invite-link {
+      background: #2c2c2e;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .invite-link p {
+      margin: 0 0 8px 0;
+      color: #8e8e93;
+      font-size: 14px;
+    }
+    .invite-link a {
+      color: #5d9df5;
+      text-decoration: none;
+      font-size: 15px;
+      word-break: break-all;
+    }
+    .tabs {
+      display: flex;
+      background: #2c2c2e;
+      padding: 8px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
+    .tabs span {
+      color: #8e8e93;
+      font-size: 14px;
+      padding: 8px 12px;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .tabs .active {
+      color: #ffffff;
+      font-weight: 600;
+      background: #3a3a3c;
+      border-radius: 8px;
+    }
+    .members-list {
+      background: #2c2c2e;
+      border-radius: 12px;
+      padding: 5px 0;
+      margin-bottom: 30px;
+    }
+    .member {
+      padding: 12px 15px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #3a3a3c;
+    }
+    .member:last-child {
+      border-bottom: none;
+    }
+    .member-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .member-info {
+      flex: 1;
+    }
+    .member-name {
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .member-status {
+      font-size: 13px;
+      color: #8e8e93;
+    }
+    .online {
+      color: #34c759 !important;
+    }
+    .recently {
+      color: #ffcc00 !important;
+    }
+
+    /* Warna avatar acak */
+    .avatar-1 { background-color: #FF6B6B; }
+    .avatar-2 { background-color: #FFD93D; }
+    .avatar-3 { background-color: #6BCB77; }
+    .avatar-4 { background-color: #4D96FF; }
+    .avatar-5 { background-color: #A66DD4; }
+    .avatar-6 { background-color: #FF922B; }
+    .avatar-7 { background-color: #20C997; }
+    .avatar-8 { background-color: #EF476F; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="profile">
+      <img src="https://img.doodcdn.io/splash/4gq91ai640jdcv1r.jpg" alt="Logo" class="logo"/>
+      <h1 class="group-name">Viralisme Indo Terbaru 2025</h1>
+      <p class="members-count">40.472 members, 120 online</p>
+    </div>
+
+    <div class="action-buttons">
+      <div class="action-item">
+        <button>＋</button>
+        <span>Add Members</span>
+      </div>
+      <div class="action-item">
+        <button>⩍</button>
+        <span>Unmute</span>
+      </div>
+      <div class="action-item">
+        <button>⋯</button>
+        <span>More</span>
+      </div>
+    </div>
+    
+    <div class="invite-link">
+      <p>Invite link</p>
+      <a href="#">https://t.me/viralismeindo</a>
+    </div>
+    
+    <div class="tabs">
+      <span class="active">Members</span>
+      <span>Media</span>
+      <span>Files</span>
+      <span>Music</span>
+      <span>Voice</span>
+      <span>Links</span>
+    </div>
+    
+    <div class="members-list">
+      <div class="member">
+        <div class="member-avatar avatar-1">R</div>
+        <div class="member-info">
+          <div class="member-name">Ren</div>
+          <div class="member-status">last seen just now</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-2">S</div>
+        <div class="member-info">
+          <div class="member-name">Siti Nur Afifah</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-3">D</div>
+        <div class="member-info">
+          <div class="member-name">Dipsi</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-4">G</div>
+        <div class="member-info">
+          <div class="member-name">Girl🌼</div>
+          <div class="member-status recently">last seen recently</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-5">R</div>
+        <div class="member-info">
+          <div class="member-name">Rehan Rere</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-6">M</div>
+        <div class="member-info">
+          <div class="member-name">Muna Anum</div>
+          <div class="member-status">last seen 4 minutes ago</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-7">I</div>
+        <div class="member-info">
+          <div class="member-name">I Honey👻</div>
+          <div class="member-status online">online</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar avatar-8">A</div>
+        <div class="member-info">
+          <div class="member-name">anak sulung</div>
+          <div class="member-status">last seen a long time ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
